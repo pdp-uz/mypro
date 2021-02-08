@@ -11,7 +11,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import java.util.Date;
-import java.util.UUID;
+
 
 @Data
 @NoArgsConstructor
@@ -21,7 +21,7 @@ public class Images {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private UUID id;
+    private Long id;
 
     private String fileName;
 

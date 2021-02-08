@@ -3,7 +3,9 @@ package uz.tdpu.payload;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import org.springframework.web.multipart.MultipartFile;
 import uz.tdpu.entity.Category;
+import uz.tdpu.entity.Images;
 
 @Data
 @NoArgsConstructor
@@ -18,6 +20,6 @@ public class ReqChildren {
 
     private String fullName;
 
-
+   private Long imageId;
 
 }

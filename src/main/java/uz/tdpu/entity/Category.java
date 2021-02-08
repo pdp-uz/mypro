@@ -28,6 +28,8 @@ public class Category {
     @Column(name = "full_name")
     private String fullName;
 
+    private Images images;
+
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "parent_id", insertable = false, updatable = false)
     @JsonIgnore
@@ -44,10 +46,11 @@ public class Category {
     @Column(name = "updated_at")
     private Date updatedAt;
 
-    public Category(String name, Integer age, String fullName, Long parentId) {
+    public Category(String name, Integer age, String fullName, Images images, Long parentId) {
         this.name = name;
         this.age = age;
         this.fullName = fullName;
+        this.images=images;
         this.parentId = parentId;
     }
 
@@ -55,4 +58,5 @@ public class Category {
         this.name = name;
         this.parentId = parentId;
     }
+
 }

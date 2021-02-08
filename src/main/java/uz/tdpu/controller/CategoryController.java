@@ -32,22 +32,27 @@ public class CategoryController {
     public HttpEntity<?> addCategory(@RequestBody ReqCategory reqCategory) {
       return ResponseEntity.ok(categoryService.addCategoryParent(reqCategory));
     }
+
     @PostMapping("/add/children")
     public HttpEntity<?> addChildren(@RequestBody ReqChildren reqChildren) {
         return ResponseEntity.ok(categoryService.addChildren(reqChildren));
     }
+
     @PutMapping("/edit/category/{id}")
     public Result editCategory(@PathVariable Long id, @RequestBody ReqEditCategory reqEditCategory){
         return categoryService.editCategory(id, reqEditCategory);
     }
+
     @DeleteMapping("/delete/category/{id}")
     public Result deleteCategory(@PathVariable Long id){
         return categoryService.deleteCategory(id);
     }
+
     @PutMapping("/edit/children/{id}")
     public Result editChildren(@PathVariable Long id, @RequestBody ReqEditChildren reqEditChildren){
         return categoryService.editChildren(id, reqEditChildren);
     }
+
     @DeleteMapping("/delete/children/{id}")
     public Result deleteChildren(@PathVariable Long id){
         return categoryService.deleteChildren(id);

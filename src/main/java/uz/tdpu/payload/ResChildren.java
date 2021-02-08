@@ -22,6 +22,8 @@ public class ResChildren {
 
     private Long parentId;
 
+    private Long imagesId;
+
     private List<ResChildren> childs;
 
 
